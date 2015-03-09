@@ -374,5 +374,6 @@ def _serialize(domtree):
     stream = walker(domtree)
     serializer = HTMLSerializer(quote_attr_values=True,
                                 alphabetical_attributes=True,
-                                omit_optional_tags=False)
+                                omit_optional_tags=False,
+                                resolve_entities=False)
     return serializer.render(stream)
